@@ -561,7 +561,7 @@
     <module id="module.framework.sf_tes_2d_drw.718033132"/>
     <module id="module.driver.spi_on_sci_spi.1825236030">
       <property id="module.driver.spi.name" value="g_spi0"/>
-      <property id="module.driver.spi.channel" value="0"/>
+      <property id="module.driver.spi.channel" value="1"/>
       <property id="module.driver.spi.operating_mode" value="module.driver.spi.operating_mode.mode_master"/>
       <property id="module.driver.spi.clk_phase" value="module.driver.spi.clk_phase.clk_phase_edge_even"/>
       <property id="module.driver.spi.clk_polarity" value="module.driver.spi.clk_polarity.clk_polarity_high"/>
@@ -574,40 +574,6 @@
       <property id="module.driver.spi.txi_ipl" value="board.icu.common.irq.priority3"/>
       <property id="module.driver.spi.tei_ipl" value="board.icu.common.irq.priority3"/>
       <property id="module.driver.spi.eri_ipl" value="board.icu.common.irq.priority3"/>
-    </module>
-    <module id="module.driver.transfer_on_dtc.91749986">
-      <property id="module.driver.transfer.name" value="g_transfer0"/>
-      <property id="module.driver.transfer.mode" value="module.driver.transfer.mode.mode_normal"/>
-      <property id="module.driver.transfer.size" value="module.driver.transfer.size.size_2_byte"/>
-      <property id="module.driver.transfer.dest_addr_mode" value="module.driver.transfer.dest_addr_mode.addr_mode_fixed"/>
-      <property id="module.driver.transfer.src_addr_mode" value="module.driver.transfer.src_addr_mode.addr_mode_fixed"/>
-      <property id="module.driver.transfer.repeat_area" value="module.driver.transfer.repeat_area.repeat_area_source"/>
-      <property id="module.driver.transfer.interrupt" value="module.driver.transfer.interrupt.interrupt_end"/>
-      <property id="module.driver.transfer.p_dest" value="NULL"/>
-      <property id="module.driver.transfer.p_src" value="NULL"/>
-      <property id="module.driver.transfer.length" value="0"/>
-      <property id="module.driver.transfer.num_blocks" value="0"/>
-      <property id="module.driver.transfer.activation_source" value="module.driver.transfer.event.event_elc_software_event_0"/>
-      <property id="module.driver.transfer.auto_enable" value="module.driver.transfer.auto_enable.true"/>
-      <property id="module.driver.transfer.p_callback" value="NULL"/>
-      <property id="module.driver.transfer.irq_ipl" value="board.icu.common.irq.disabled"/>
-    </module>
-    <module id="module.driver.transfer_on_dtc.948981552">
-      <property id="module.driver.transfer.name" value="g_transfer1"/>
-      <property id="module.driver.transfer.mode" value="module.driver.transfer.mode.mode_normal"/>
-      <property id="module.driver.transfer.size" value="module.driver.transfer.size.size_2_byte"/>
-      <property id="module.driver.transfer.dest_addr_mode" value="module.driver.transfer.dest_addr_mode.addr_mode_fixed"/>
-      <property id="module.driver.transfer.src_addr_mode" value="module.driver.transfer.src_addr_mode.addr_mode_fixed"/>
-      <property id="module.driver.transfer.repeat_area" value="module.driver.transfer.repeat_area.repeat_area_source"/>
-      <property id="module.driver.transfer.interrupt" value="module.driver.transfer.interrupt.interrupt_end"/>
-      <property id="module.driver.transfer.p_dest" value="NULL"/>
-      <property id="module.driver.transfer.p_src" value="NULL"/>
-      <property id="module.driver.transfer.length" value="0"/>
-      <property id="module.driver.transfer.num_blocks" value="0"/>
-      <property id="module.driver.transfer.activation_source" value="module.driver.transfer.event.event_elc_software_event_0"/>
-      <property id="module.driver.transfer.auto_enable" value="module.driver.transfer.auto_enable.true"/>
-      <property id="module.driver.transfer.p_callback" value="NULL"/>
-      <property id="module.driver.transfer.irq_ipl" value="board.icu.common.irq.disabled"/>
     </module>
     <context id="_hal.0">
       <stack module="module.driver.elc_on_elc.0"/>
@@ -656,10 +622,12 @@
           </stack>
         </stack>
       </stack>
-      <stack module="module.driver.spi_on_sci_spi.1825236030">
-        <stack module="module.driver.transfer_on_dtc.91749986" requires="module.driver.spi_on_sci_spi.requires.transfer_tx"/>
-        <stack module="module.driver.transfer_on_dtc.948981552" requires="module.driver.spi_on_sci_spi.requires.transfer_rx"/>
-      </stack>
+      <stack module="module.driver.spi_on_sci_spi.1825236030"/>
+      <object id="rtos.threadx.object.semaphore.1675084019">
+        <property id="rtos.threadx.object.semaphore.name" value="New Semaphore"/>
+        <property id="rtos.threadx.object.semaphore.symbol" value="g_new_semaphore_lcd"/>
+        <property id="rtos.threadx.object.semaphore.count" value="0"/>
+      </object>
     </context>
     <context id="rtos.threadx.thread.1267943316">
       <property id="_symbol" value="blinky_lcd_thread"/>
@@ -707,7 +675,7 @@
     </config>
     <config id="config.el.gx">
       <property id="config.el.gx.enable_synergy_drw" value="config.el.gx.enable_synergy_drw.yes"/>
-      <property id="config.el.gx.enable_synergy_jpeg" value="config.el.gx.enable_synergy_jpeg.no"/>
+      <property id="config.el.gx.enable_synergy_jpeg" value="config.el.gx.enable_synergy_jpeg.yes"/>
     </config>
     <config id="config.driver.elc">
       <property id="config.driver.elc.checking" value="config.driver.elc.checking.system"/>

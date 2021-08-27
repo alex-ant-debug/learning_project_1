@@ -29,8 +29,8 @@ static TX_SEMAPHORE     g_lcd_sema;
 static spi_cfg_t        g_lcd_spi_cfg;
 
 void g_lcd_spi_callback (spi_callback_args_t * p_args);
-//static ssp_err_t lcd_write(uint8_t cmd, uint8_t * data , uint32_t len);
-//static ssp_err_t lcd_read(uint8_t cmd, uint8_t * data , uint32_t len);
+static ssp_err_t lcd_write(uint8_t cmd, uint8_t * data , uint32_t len);
+static ssp_err_t lcd_read(uint8_t cmd, uint8_t * data , uint32_t len);
 
 void g_lcd_spi_callback (spi_callback_args_t * p_args)
 {
@@ -214,4 +214,28 @@ ssp_err_t ILI9341V_Init(const spi_instance_t * p_spi_instance)
     g_ioport.p_api->pinWrite(LCD_CS,IOPORT_LEVEL_HIGH);
 
     return SSP_SUCCESS;
+}
+
+
+ssp_err_t DrawPixel(uint32_t x, uint32_t y, uint32_t color)
+ {
+    ssp_err_t err;
+
+    // check dimension
+    if ((x > 320) || (y > 240))
+    {
+        // error
+        return err;
+    }
+
+
+
+    return err;
+ }
+
+void setCursorPosition(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2)
+{
+    lcd_write(ILI9341_COLUMN_ADDR, (uint8_t *) "\x0", 0);
+
+    lcd_write(ILI9341_PAGE_ADDR, (uint8_t *) "\x0", 0);
 }

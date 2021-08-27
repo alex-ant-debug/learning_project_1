@@ -5,5 +5,5 @@
 #include "gx_src_user.h"
 #endif
 #define GX_USE_SYNERGY_DRW  (1)
-#define GX_USE_SYNERGY_JPEG (0)
+#define GX_USE_SYNERGY_JPEG (1)
 #endif /* GX_USER_H_ */

@@ -793,18 +793,12 @@
   </v1:configSetting>
   <v1:configSetting configurationId="p506.gpio_mode" altId="p506.gpio_mode.gpio_mode_in"/>
   <v1:configSetting configurationId="spi0.pairing" altId="spi0.pairing.free"/>
-  <v1:configSetting configurationId="spi0.miso" altId="spi0.miso.p410">
-    <v1:connectionSetting altId="p410.spi0.miso"/>
-  </v1:configSetting>
   <v1:configSetting configurationId="p608.gpio_mode" altId="p608.gpio_mode.gpio_mode_in"/>
   <v1:configSetting configurationId="sci1.mode" altId="sci1.mode.disabled"/>
   <v1:configSetting configurationId="p800.gpio_mode" altId="p800.gpio_mode.gpio_mode_in"/>
   <v1:configSetting configurationId="p801.gpio_mode" altId="p801.gpio_mode.gpio_mode_in"/>
   <v1:configSetting configurationId="p311.gpio_mode" altId="p311.gpio_mode.gpio_mode_in"/>
-  <v1:configSetting configurationId="p411.gpio_mode" altId="p411.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p604.gpio_mode" altId="p604.gpio_mode.gpio_mode_in"/>
-  <v1:configSetting configurationId="p412.gpio_mode" altId="p412.gpio_mode.gpio_mode_peripheral"/>
-  <v1:configSetting configurationId="p413.gpio_mode" altId="p413.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p310.gpio_mode" altId="p310.gpio_mode.gpio_mode_in"/>
   <v1:configSetting configurationId="p605.gpio_mode" altId="p605.gpio_mode.gpio_mode_in"/>
   <v1:configSetting configurationId="p801" altId="p801.input"/>
@@ -823,12 +817,23 @@
   <v1:configSetting configurationId="p403.gpio_mode" altId="p403.gpio_mode.gpio_mode_in"/>
   <v1:configSetting configurationId="p506" altId="p506.input"/>
   <v1:configSetting configurationId="p507" altId="p507.input"/>
+  <v1:configSetting configurationId="p403" altId="p403.input"/>
+  <v1:configSetting configurationId="p311" altId="p311.input"/>
+  <v1:configSetting configurationId="p310" altId="p310.input"/>
+  <v1:configSetting configurationId="p312" altId="p312.input"/>
+  <v1:configSetting configurationId="p309" altId="p309.output.high"/>
+  <v1:configSetting configurationId="p613.gpio_mode" altId="p613.gpio_mode.gpio_mode_in"/>
+  <v1:configSetting configurationId="p806.gpio_mode" altId="p806.gpio_mode.gpio_mode_out.high"/>
+  <v1:configSetting configurationId="p806" altId="p806.output.high"/>
+  <v1:configSetting configurationId="sci0.cts" altId="sci0.cts.none"/>
+  <v1:configSetting configurationId="spi0.miso" altId="spi0.miso.p410">
+    <v1:connectionSetting altId="p410.spi0.miso"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="p411.gpio_mode" altId="p411.gpio_mode.gpio_mode_peripheral"/>
+  <v1:configSetting configurationId="p412.gpio_mode" altId="p412.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p410.gpio_mode" altId="p410.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p410" altId="p410.spi0.miso">
     <v1:connectionSetting altId="spi0.miso.p410"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="p413" altId="p413.spi0.ssl0">
-    <v1:connectionSetting altId="spi0.ssl0.p413"/>
   </v1:configSetting>
   <v1:configSetting configurationId="p412" altId="p412.spi0.rspck">
     <v1:connectionSetting altId="spi0.rspck.p412"/>
@@ -836,21 +841,17 @@
   <v1:configSetting configurationId="p411" altId="p411.spi0.mosi">
     <v1:connectionSetting altId="spi0.mosi.p411"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="p403" altId="p403.input"/>
   <v1:configSetting configurationId="spi0.rspck" altId="spi0.rspck.p412">
     <v1:connectionSetting altId="p412.spi0.rspck"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="p311" altId="p311.input"/>
-  <v1:configSetting configurationId="p310" altId="p310.input"/>
-  <v1:configSetting configurationId="p312" altId="p312.input"/>
   <v1:configSetting configurationId="spi0.ssl0" altId="spi0.ssl0.p413">
     <v1:connectionSetting altId="p413.spi0.ssl0"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="p309" altId="p309.output.high"/>
   <v1:configSetting configurationId="spi0.mosi" altId="spi0.mosi.p411">
     <v1:connectionSetting altId="p411.spi0.mosi"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="p613.gpio_mode" altId="p613.gpio_mode.gpio_mode_in"/>
-  <v1:configSetting configurationId="p806.gpio_mode" altId="p806.gpio_mode.gpio_mode_out.high"/>
-  <v1:configSetting configurationId="p806" altId="p806.output.high"/>
+  <v1:configSetting configurationId="p413.gpio_mode" altId="p413.gpio_mode.gpio_mode_peripheral"/>
+  <v1:configSetting configurationId="p413" altId="p413.spi0.ssl0">
+    <v1:connectionSetting altId="spi0.ssl0.p413"/>
+  </v1:configSetting>
 </v1:pinSettings>

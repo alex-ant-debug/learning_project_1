@@ -92,14 +92,9 @@ void lv_port_disp_init(void)
 
     /* Example for 3) also set disp_drv.full_refresh = 1 below*/
     static lv_disp_draw_buf_t draw_buf_dsc_3;
-     lv_color_t buf_3_1[MY_DISP_HOR_RES * MY_DISP_VER_RES];            /*A screen sized buffer*/
-     lv_color_t buf_3_2[MY_DISP_HOR_RES * MY_DISP_VER_RES];            /*An other screen sized buffer*/
+    static lv_color_t buf_3_1[MY_DISP_HOR_RES * MY_DISP_VER_RES];            /*A screen sized buffer*/
+    static lv_color_t buf_3_2[MY_DISP_HOR_RES * MY_DISP_VER_RES];            /*An other screen sized buffer*/
 
-//    for(int i = 0; i < (76800); i++)
-//    {
-//        buf_3_1[i].full = 0;
-//       // buf_3_2[i].full = 65535;
-//    }
 
     lv_disp_draw_buf_init(&draw_buf_dsc_3, buf_3_1, buf_3_2, MY_DISP_VER_RES * LV_VER_RES_MAX);   /*Initialize the display buffer*/
 
@@ -157,9 +152,7 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
     for(y = area->y1; y <= area->y2; y++) {
         for(x = area->x1; x <= area->x2; x++) {
             /*Put a pixel to the display. For example:*/
-            lcd_write(ILI9341_WRITE_MEM_CONT, (uint8_t *)x, 1);/*put_px(x, y, *color_p)*/
-            //_gx_dave2d_pixel_write_565(context, x, y, *color_p);
-            //_gx_dave2d_pixel_write_8bpp(GX_DRAW_CONTEXT * context, INT x, INT y, GX_COLOR color);
+            /*put_px(x, y, *color_p)*/
             color_p++;
         }
     }

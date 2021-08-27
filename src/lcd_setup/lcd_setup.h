@@ -30,6 +30,10 @@
 #define LCD_RESET IOPORT_PORT_06_PIN_10
 #define LCD_CMD	  IOPORT_PORT_01_PIN_15
 #define LCD_CS	  IOPORT_PORT_06_PIN_11
+//-------------------------------------
+#define LCD_RD    IOPORT_PORT_01_PIN_14
+#define LCD_WR    IOPORT_PORT_01_PIN_15
+//-------------------------------------
 
 /* ILI9341 command set */
 #define ILI9341_SW_RESET            0x01
@@ -118,7 +122,7 @@
 #define ILI9341_PRC                 0xF7
 
 ssp_err_t ILI9341V_Init(const spi_instance_t * p_spi_instance);
-ssp_err_t lcd_write(uint8_t cmd, uint8_t * data , uint32_t len);
-ssp_err_t lcd_read(uint8_t cmd, uint8_t * data , uint32_t len);
+ssp_err_t DrawPixel(uint32_t x, uint32_t y, uint32_t color);
+void setCursorPosition(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2);
 
 #endif /* LCD_SETUP_H_ */

@@ -70,7 +70,13 @@ synergy/ssp/src/framework/sf_el_gx/gx_display_driver_synergy_dave2d.o: \
  C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\tes/dave_types.h \
  C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\tes/dave_errorcodes.h \
  C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\tes/dave_base.h \
- C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\tes/dave_math.h
+ C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\tes/dave_math.h \
+ C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\instances/sf_jpeg_decode.h \
+ C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\api/sf_jpeg_decode_api.h \
+ C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\driver\api/r_jpeg_decode_api.h \
+ C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy_cfg\ssp_cfg\driver/r_jpeg_decode_cfg.h \
+ C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\el/tx_api.h \
+ C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\driver\instances/r_jpeg_decode.h
 
 C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\el/gx_api.h:
 
@@ -213,3 +219,15 @@ C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\frame
 C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\tes/dave_base.h:
 
 C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\tes/dave_math.h:
+
+C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\instances/sf_jpeg_decode.h:
+
+C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\api/sf_jpeg_decode_api.h:
+
+C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\driver\api/r_jpeg_decode_api.h:
+
+C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy_cfg\ssp_cfg\driver/r_jpeg_decode_cfg.h:
+
+C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\framework\el/tx_api.h:
+
+C:\Users\olemtiuh\e2_studio\workspace_1\learning_project_1\synergy\ssp\inc\driver\instances/r_jpeg_decode.h:

@@ -302,7 +302,7 @@ Synergy Configuration
   Module "Touch Panel Driver on touch_panel_sx8654"
   Module "GUIX on gx"
     Enable Synergy 2D Drawing Engine Support: Yes(default)
-    Enable Synergy JPEG Support: No
+    Enable Synergy JPEG Support: Yes(default)
     
   Module "GUIX Port on sf_el_gx"
     Parameter Checking: Enabled
@@ -676,7 +676,7 @@ Synergy Configuration
           Instance "D/AVE 2D Port on sf_tes_2d_drw"
     Instance "g_spi0 SPI Driver on r_sci_spi"
       Name: g_spi0
-      Channel: 0
+      Channel: 1
       Operating Mode: Master
       Clock Phase: Data sampling on even edge, data variation on odd edge
       Clock Polarity: High when idle
@@ -690,40 +690,11 @@ Synergy Configuration
       Transmit End Interrupt Priority: Priority 3
       Error Interrupt Priority: Priority 3
       
-      Instance "g_transfer0 Transfer Driver on r_dtc SCI0 TXI"
-        Name: g_transfer0
-        Mode: Normal
-        Transfer Size: 1 Byte
-        Destination Address Mode: Fixed
-        Source Address Mode: Incremented
-        Repeat Area (Unused in Normal Mode): Source
-        Interrupt Frequency: After all transfers have completed
-        Destination Pointer: NULL
-        Source Pointer: NULL
-        Number of Transfers: 0
-        Number of Blocks (Valid only in Block Mode): 0
-        Activation Source (Must enable IRQ): SCI0 TXI
-        Auto Enable: False
-        Callback (Only valid with Software start): NULL
-        ELC Software Event Interrupt Priority: Disabled
-        
-      Instance "g_transfer1 Transfer Driver on r_dtc SCI0 RXI"
-        Name: g_transfer1
-        Mode: Normal
-        Transfer Size: 1 Byte
-        Destination Address Mode: Incremented
-        Source Address Mode: Fixed
-        Repeat Area (Unused in Normal Mode): Destination
-        Interrupt Frequency: After all transfers have completed
-        Destination Pointer: NULL
-        Source Pointer: NULL
-        Number of Transfers: 0
-        Number of Blocks (Valid only in Block Mode): 0
-        Activation Source (Must enable IRQ): SCI0 RXI
-        Auto Enable: False
-        Callback (Only valid with Software start): NULL
-        ELC Software Event Interrupt Priority: Disabled
-        
+    Object "g_new_semaphore_lcd Semaphore"
+      Name: New Semaphore
+      Symbol: g_new_semaphore_lcd
+      Initial count: 0
+      
   Thread "Blinky  LCD Thread"
     Symbol: blinky_lcd_thread
     Name: Blinky  LCD Thread
